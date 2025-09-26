@@ -1,6 +1,8 @@
 import "./globals.css";
 import { Navbar } from "@/components/ui/Navbar";
 import { Hero } from "@/components/ui/Hero";
+import { TrustBar } from "@/components/ui/TrustBar";
+import { FeaturesGrid } from "@/components/ui/FeaturesGrid";
 
 export default function Page() {
   return (
@@ -8,7 +10,8 @@ export default function Page() {
       <Navbar />
       <main>
         <Hero />
-        {/* Trust Bar and Features Grid will be added here */}
+        <TrustBar />
+        <FeaturesGrid />
       </main>
     </div>
   );
