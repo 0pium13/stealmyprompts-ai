@@ -1,3 +1,5 @@
+import { Footer } from "@/components/ui/Footer";
+
 export const metadata = {
   title: "StealMyPrompts.ai",
   description: "AI prompt marketplace with live previews and 15% commission",
@@ -18,6 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen bg-neutral-50 antialiased">
         <Providers>
           {children}
+          <Footer />
         </Providers>
       </body>
     </html>

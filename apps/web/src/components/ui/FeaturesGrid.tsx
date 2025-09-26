@@ -1,3 +1,5 @@
+import { designTokens } from "@/lib/theme";
+
 export function FeaturesGrid() {
   const features = [
     { title: "Live Output Previews", desc: "See results before you buy.", icon: (
@@ -15,14 +17,14 @@ export function FeaturesGrid() {
   ];
 
   return (
-    <section className="bg-white">
+    <section style={{ background: designTokens.colors.white }}>
       <div className="mx-auto max-w-[1200px] px-8 py-16">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((f) => (
-            <div key={f.title} className="rounded-lg border border-neutral-200 p-6 hover:shadow-lg transition-shadow">
-              <div className="mb-3 text-blue-600">{f.icon}</div>
-              <h3 className="text-neutral-900 font-semibold">{f.title}</h3>
-              <p className="mt-1 text-sm text-neutral-600">{f.desc}</p>
+            <div key={f.title} className="rounded-lg border p-6 hover:shadow-lg transition-shadow" style={{ borderColor: designTokens.colors.neutral[200] }}>
+              <div className="mb-3" style={{ color: designTokens.colors.primary[600] }}>{f.icon}</div>
+              <h3 className="font-semibold" style={{ color: designTokens.colors.neutral[900] }}>{f.title}</h3>
+              <p className="mt-1 text-sm" style={{ color: designTokens.colors.neutral[600] }}>{f.desc}</p>
             </div>
           ))}
         </div>
