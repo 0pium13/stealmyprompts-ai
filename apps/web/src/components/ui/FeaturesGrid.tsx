@@ -1,4 +1,6 @@
 import { designTokens } from "@/lib/theme";
+import { Card, CardContent } from "@/components/ui/card";
+import { Heading, Text } from "@/components/ui/typography";
 
 export function FeaturesGrid() {
   const features = [
@@ -21,11 +23,13 @@ export function FeaturesGrid() {
       <div className="mx-auto max-w-[1200px] px-8 py-16">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((f) => (
-            <div key={f.title} className="rounded-lg border p-6 hover:shadow-lg transition-shadow" style={{ borderColor: designTokens.colors.neutral[200] }}>
-              <div className="mb-3" style={{ color: designTokens.colors.primary[600] }}>{f.icon}</div>
-              <h3 className="font-semibold" style={{ color: designTokens.colors.neutral[900] }}>{f.title}</h3>
-              <p className="mt-1 text-sm" style={{ color: designTokens.colors.neutral[600] }}>{f.desc}</p>
-            </div>
+            <Card key={f.title}>
+              <CardContent>
+                <div className="mb-3" style={{ color: designTokens.colors.primary[600] }}>{f.icon}</div>
+                <Heading level={4}>{f.title}</Heading>
+                <Text className="mt-1" muted>{f.desc}</Text>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>

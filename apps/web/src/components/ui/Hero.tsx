@@ -1,29 +1,27 @@
 import { designTokens } from "@/lib/theme";
+import { Button } from "@/components/ui/button";
+import { Heading, Text } from "@/components/ui/typography";
 
 export function Hero() {
   return (
     <section className="pt-24" style={{ background: `linear-gradient(180deg, ${designTokens.colors.dark[900]} 0%, ${designTokens.colors.dark[800]} 100%)` }}>
       <div className="mx-auto max-w-[1200px] px-8 py-24">
         <div className="text-center">
-          <h1 className="font-bold leading-tight tracking-tight text-[60px]" style={{ color: designTokens.colors.white }}>
+          <Heading className="tracking-tight" level={1} style={{ color: designTokens.colors.white, fontSize: 60 }}>
             The marketplace where AI prompts earn real money
-          </h1>
-          <p className="mt-4 text-lg md:text-xl" style={{ color: "#D1D5DB" }}>
+          </Heading>
+          <Text className="mt-4 text-lg md:text-xl" muted style={{ color: "#D1D5DB" }}>
             Live output previews. 15% commission. Hidden prompts until purchase.
-          </p>
+          </Text>
 
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-            <a href="/signup" className="inline-flex items-center justify-center rounded-md px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors" style={{ background: designTokens.colors.primary[600] }}>
-              Start Earning Today
-            </a>
-            <a href="/community" className="inline-flex items-center justify-center rounded-md border px-6 py-3 text-sm font-semibold text-white transition-colors" style={{ borderColor: "rgba(255,255,255,0.2)" }}>
-              Join Community
-            </a>
+            <Button size="lg">Start Earning Today</Button>
+            <Button variant="outline" size="lg">Join Community</Button>
           </div>
 
-          <div className="mt-6 text-sm" style={{ color: "#D1D5DB" }}>
+          <Text className="mt-6 text-sm" muted>
             Join 2,847+ creators • $127K paid this month • 15,000+ community members
-          </div>
+          </Text>
         </div>
       </div>
     </section>
